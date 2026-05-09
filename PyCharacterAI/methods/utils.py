@@ -82,9 +82,8 @@ class UtilsMethods:
             urls = []
 
             for img in result:
-                url = img.get("url", None)
-                if url:
-                    urls.append(url)
+                if isinstance(img, str):
+                    urls.append(img)
 
             return urls
 
